@@ -1,0 +1,55 @@
+Filtersektionen
+Ingredienser & Kök (Dropdown-menyer)
+Funktion: Här kan man välja vilken del av världen recepten kommer ifrån och vilken huvudingrediens som 
+ska finnas i rätten. Däremot filtreras inte några recept bort. Om man väljer t.ex. vegetariskt finns det
+fortfarande recept med kött längre ner i listan.
+Pliancy:
+
+    Bra: "Visa alla" i en ruta med pil nedåt visar att det är en dropdown, vilket är ett exempel av pliancy.
+
+    Dåligt: Man kunde öka känslan av interaktivitet genom att lägga till hover-effekter (t.ex. ljusare bakgrund vid mouse-over).
+
+
+Feedback:
+
+    Bra: Vid val i dropdown uppdateras listan med recept. Detta sker direkt utan att kräva någon sorts sök-knapp(modeless feedback), det är ett bra tecken av feedback.
+
+
+Svårighetsgrad (Radioknappar)
+Funktion: Här kan man anpassa hur svårt det är att tillaga måltiden.
+Pliancy:
+
+    Bra: Radioknappar är standard och tydliga. Det är uppenbart att man kan klicka i dem.
+
+Feedback:
+
+    Bra: När man klickar på en nivå uppdateras listan direkt. Eftersom detta också sker direkt så är det bra feedback.
+
+Pris- och Tidsreglage (Sliders)
+Funktion: Här anpassar man maxpris och maxtid. Här kommer dock recept som tar längre än maxtiden man 
+valt att visas längre ner i listan vilket inte framgår tydligt.
+Pliancy:
+
+    Bra: Sliders med cirklar indikerar att de kan dras – det är tydligt att detta är en interaktiv komponent.
+
+Feedback:
+
+    Bra: Den aktuella siffran visas (t.ex. “60 kr”, “30 minuter”) – det ger visuell feedback på vad användaren valt. Även här uppdateras listan direkt när man ändrar på slidern, vilket åter igen är ett bra tecken på feedback.
+
+Receptlistan (till höger)
+Funktion: Man kan klicka på recepten. Där kan man (kommer kunna) se recept och ingredienser antar vi.
+Pliancy:
+
+
+    Bra: Muspekaren blir till en hand när man är över recepten vilket kan tyda på att de är klickbara.
+
+    Dåligt: Det kunde varit tydligare ifall recepten är klickbara eller inte. Man kan lägga till någon sorts Hover-effekt (t.ex. förstorad bild)
+
+Feedback:
+
+Bra: När man klickar på ett recept så öppnas detaljerna för receptet direkt, alltså ännu ett exempel av modeless feedback
+
+Test på android:
+När man kör programmet på en android emulator så blir filtersidan för stor jämfört med recepten. Koden för appen är inte kodad för att vara responsiv baserad på olika skärmstorlekar.
+
+Sammanfattning: Koden har för det mesta bra pliancy, det är tydligt vad som går att ändra och klicka på. Den ändringen som vi hade velat göra är att lägga till en Hover-funktion på recepten så att det är tydligare att de är klickbara. Feedbacken är bra då den är modeless, alltså att den händer direkt utan något mellansteg. Däremot så blir inte sorteringen rätt. Man kan t.ex. få upp kycklingrätter när man söker på vegetariskt.

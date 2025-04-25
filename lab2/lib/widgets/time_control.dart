@@ -19,7 +19,8 @@ class _TimeControlState extends State<TimeControl> {
     children: [
       Slider(
         value: _time,
-        divisions: 15,
+        divisions: 14,
+        min: 10,
         max: 150,
         onChanged: (double value) {
           setState(() {

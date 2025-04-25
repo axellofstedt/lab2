@@ -20,15 +20,23 @@ class RecipeList extends StatelessWidget {
     }
     return ListView(children: [
       for (final recipe in recipes)
+      RecipeListItem(recipe, onTap: () {
+        uiController.selectRecipe(recipe);
+        },
+        ),
+    ],
+    );
+      /*
       GestureDetector(
       onTap: () => onTap(recipe),
       child: Row(children: [
-        Image.asset("assets/recipes/" + recipe.imagePath, scale: 3,),
+        Image.asset("assets/recipes/" + recipe.imagePath, height: 60,),
         Text(recipe.name),
       ]
         ),
       ),
     ]
     );
+*/
   }
 }
