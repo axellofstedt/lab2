@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lab2/app_theme.dart';
+import 'package:lab2/constants/assets.dart';
 import 'package:lab2/model/recipe_database/recipe_handler.dart';
 import 'package:provider/provider.dart';
 
@@ -14,23 +16,39 @@ class _TimeControlState extends State<TimeControl> {
 
   @override
   Widget build(BuildContext context) {
-  var recipeHandler = Provider.of<RecipeHandler>(context, listen: false);
-  return Column(
-    children: [
-      Slider(
-        value: _time,
-        divisions: 14,
-        min: 10,
-        max: 150,
-        onChanged: (double value) {
-          setState(() {
-            _time = value;
-          });
-          recipeHandler.setMaxTime(value.toInt());
-        },
-      ),
-      Text('${_time.round()} minuter'),
-     ],
- );
-}
+    Image timeIcon = Image.asset(Assets.timeIcon, height: 16);
+    var recipeHandler = Provider.of<RecipeHandler>(context, listen: false);
+    return Column(
+      children: [
+        Slider(
+          value: _time,
+          divisions: 14,
+          min: 10,
+          max: 150,
+          onChanged: (double value) {
+            setState(() {
+              _time = value;
+            });
+            recipeHandler.setMaxTime(value.toInt());
+          },
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(right: AppTheme.paddingLarge),
+              child: 
+                Row(
+                  children: [
+                    Text('${_time.round()} '),
+                    //SizedBox(width:AppTheme.paddingSmall),
+                    timeIcon,
+                  ]
+                ) 
+            ),
+          ],
+        ),
+      ],
+    );
+  }
 }
